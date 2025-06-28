@@ -1,44 +1,50 @@
-## 📚 Table of Contents
+## Table of Contents
 
-- [🧠 Variable Naming Conventions](#-variable-naming-conventions)
-- [🧭 Order of Functions in Python](#-order-of-functions-in-python)
-- [🗂️ Dictionaries in Python](#dictionaries-in-python)
-- [🍇 Sets in Python](#sets-in-python)
-- [🍇 Multiple Return Values in Python](#multiple-return-values-in-python)
-
-
-## 🧠 Variable Naming Conventions
-
-Variable names **cannot contain spaces**. They're continuous strings of characters and should be written in a readable format.
-
-> 🗣 _"Please use `snake_case` for variable names."_  
-> — **Guido van Rossum**, Creator of Python
-
-### 📦 Common Naming Styles
-
-| **Name**       | **Description**                                        | **Example**           | **Languages That Recommend It**       |
-|----------------|--------------------------------------------------------|------------------------|----------------------------------------|
-| **Snake Case** | All words are lowercase, separated by underscores      | `my_hero_health`       | Python, Ruby, Rust                     |
-| **Camel Case** | Capitalize each word except the first                  | `myHeroHealth`         | JavaScript, Java                       |
-| **Pascal Case**| Capitalize every word, including the first             | `MyHeroHealth`         | C#, C++                                |
-
-## 
-## 🧭 Order of Functions in Python
-
-In Python, **all functions must be defined before they're used**.
-
-This might sound limiting at first, since the interpreter reads code **top to bottom**. But there's a simple convention that solves this problem.
+* [Variable Naming Conventions](#variable-naming-conventions)
+* [F-String](#f-string)
+* [Order of Functions in Python](#order-of-functions-in-python)
+* [Dictionaries in Python](#dictionaries-in-python)
+* [Sets in Python](#sets-in-python)
+* [Multiple Return Values in Python](#multiple-return-values-in-python)
 
 ---
 
-### 💡 The Common Pattern
+## Variable Naming Conventions
 
-Most Python developers follow this structure:
+Variable names **cannot contain spaces**. Use readable formats like:
 
-1. **Define all helper functions** first.
-2. **Define and call the main entry point** last.
+> "Please use `snake_case` for variable names."
+> — Guido van Rossum, Creator of Python
 
-This ensures that **all functions are loaded** into memory before any are called.
+### Common Naming Styles
+
+| Name        | Description                              | Example          | Common In          |
+| ----------- | ---------------------------------------- | ---------------- | ------------------ |
+| Snake Case  | Lowercase words separated by underscores | `my_hero_health` | Python, Ruby, Rust |
+| Camel Case  | Each word capitalized except the first   | `myHeroHealth`   | JavaScript, Java   |
+| Pascal Case | All words capitalized                    | `MyHeroHealth`   | C#, C++            |
+
+---
+
+## F-String
+
+* Use `f` before the string.
+* Variables inside `{}` are injected.
+
+```python
+name = "Adarsh"
+greeting = f"Hello, {name}!"
+print(greeting)  # Output: Hello, Adarsh!
+```
+
+---
+
+## Order of Functions in Python
+
+Functions must be defined before used. Python reads top to bottom.
+
+**Best Practice**
+Define all helper functions first. Call `main()` last.
 
 ```python
 def main():
@@ -53,18 +59,16 @@ def add_armor(h, a):
 def print_health(new_health):
     print(f"The player now has {new_health} health")
 
-# call entrypoint last
 main()
 ```
-> 🔁 **Reminder:** Python doesn't need a special `main()` function like some other languages (e.g., C++ or Java), but using one improves structure and clarity.
 
-## 🗂️ Dictionaries in Python
-
-Dictionaries store data in **key → value** pairs. They’re perfect for grouping related information.
+Use `main()` for structure, even though not required.
 
 ---
 
-### 🧪 Example
+## Dictionaries in Python
+
+Dictionaries store data in key → value pairs.
 
 ```python
 car = {
@@ -74,124 +78,64 @@ car = {
 }
 ```
 
-Here, `car` is a dictionary with:
-
-- Key `"brand"` → Value `"Toyota"`
-- Key `"model"` → Value `"Camry"`
-- Key `"year"` → Value `2019`
-
----
-
-> 💡 **Tip:** Dictionaries use `{}` and each key must be **unique**.
-### ⚠️ Duplicate Keys
-
-Dictionaries do **not allow duplicate keys**. If a key appears more than once, the **last value overwrites the previous one**.
+* Keys must be unique.
+* Duplicate keys? Last one wins:
 
 ```python
-car = {
-  "brand": "Toyota",
-  "brand": "Honda"
-}
-
+car = {"brand": "Toyota", "brand": "Honda"}
 print(car["brand"])  # Output: Honda
 ```
 
-Only the last `"brand"` key is kept.
-
----
-### 🗑️ Deleting Dictionary Values
-
-You can delete keys using the `del` keyword:
+### Deleting Keys
 
 ```python
-names_dict = {
-  "jack": "bronson",
-  "jill": "mcarty",
-  "joe": "denver"
-}
-
-del names_dict["joe"]
-
-print(names_dict)
-# Output: {'jack': 'bronson', 'jill': 'mcarty'}
+del car["year"]
 ```
 
-> ⚠️ **Caution:** Deleting a non-existent key with `del` will raise a `KeyError`.
-> As of Python version 3.7, dictionaries are **ordered**. In Python 3.6 and earlier, dictionaries were unordered.
+* `del` on a non-existent key raises `KeyError`.
+* Python 3.7+ maintains insertion order in dictionaries.
+
 ---
-## 🍇 Sets in Python
 
-**Sets** are like lists, but:
+## Sets in Python
 
-- They are **unordered**
-- They **guarantee uniqueness** — no duplicates allowed
-
-### 🧪 Example
+Sets are unordered collections with unique elements.
 
 ```python
 fruits = {"apple", "banana", "grape"}
-print(type(fruits))  # Output: <class 'set'>
-print(fruits)        # Output: {'banana', 'grape', 'apple'}
+print(type(fruits))
 ```
 
----
-
-### ➕ Add Values to a Set
+### Adding to a Set
 
 ```python
-fruits = {"apple", "banana", "grape"}
 fruits.add("pear")
-print(fruits)  # Output: {'banana', 'grape', 'pear', 'apple'}
 ```
 
-> ✅ Adding a duplicate won’t cause an error — it will be ignored.
+* Adding duplicates does nothing.
 
----
-
-### 🌀 Creating an Empty Set
+### Empty Set
 
 ```python
-empty_set = set()
-print(type(empty_set))  # Output: <class 'set'>
+empty_set = set()  # NOT {}
 ```
 
-> ⚠️ `{}` creates an **empty dictionary**, not a set.
-
 ---
 
-## 🎯 Multiple Return Values in Python
+## Multiple Return Values in Python
 
-In Python, a function can **return more than one value** by separating them with commas.
-
----
-
-### 🧪 Example
+Functions can return multiple values using commas:
 
 ```python
-def cast_iceblast(wizard_level, start_mana):
-    damage = wizard_level * 2
-    new_mana = start_mana - 10
-    return damage, new_mana  # returns two values
+def cast_spell(level, mana):
+    return level * 2, mana - 10
 ```
 
-Here, `cast_iceblast` returns both `damage` and `new_mana`.
-
----
-
-### 📥 Receiving Multiple Values
-
-When you call a function that returns multiple values, you can **unpack** them into separate variables:
+### Unpacking Return Values
 
 ```python
-dmg, mana = cast_iceblast(5, 100)
-print(f"Damage: {dmg}, Remaining Mana: {mana}")
+dmg, mana_left = cast_spell(5, 100)
+print(f"Damage: {dmg}, Remaining Mana: {mana_left}")
 ```
 
-📤 **Output:**
-```
-Damage: 10, Remaining Mana: 90
-```
-
----
-
-> 💡 **Tip:** Behind the scenes, Python packs multiple return values into a **tuple**.
+* Python returns values as a tuple under the hood.

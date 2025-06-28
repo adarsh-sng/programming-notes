@@ -5,7 +5,7 @@
 
 
 
-## 🐚 What Is a Shell?
+##  What Is a Shell?
 
 Your **terminal** is a program that lets you type text-based commands and see their output.
 
@@ -45,7 +45,7 @@ In simple terms, a shell:
 > 💡 This cycle makes shells interactive and powerful command interpreters.
 
 
-## 📂 Filesystem Commands
+##  Filesystem Commands
 
 These commands help you interact with your Linux filesystem — navigate, read, modify, and search files or directories.
 
