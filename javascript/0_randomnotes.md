@@ -28,3 +28,11 @@ This feature—being able to reference a specific instance of a local binding in
 Object.keys() - Returns an array of a given object's own enumerable property names, in the same order as that provided by a for...in loop.
 Object.values() - Returns an array of a given object's own enumerable property values, in the same order as that provided by a for...in loop.
 Array.from() - Creates a new, shallow-copied Array instance from an array-like or iterable object.
+
+
+
+- what is deep copy and shallow copy?
+
+
+what are @parameters and @returns in jsdoc?
+what are decorators in js?
