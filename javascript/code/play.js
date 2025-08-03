@@ -1,11 +1,7 @@
-import ansi from 'ansi-escape-sequences'
-import { setTimeout  } from 'node:timers/promises'
-console.log('Pending')
-await setTimeout(1000)
+const sleep =(ms)=>{
+    return new Promise(res=>setTimeout(()=>{res()},ms))
+}
 
-process.stdout.write(ansi.cursor.up(1) + ansi.erase.inLine(2))
-console.log('In progress')
-await setTimeout(5000)
-
-process.stdout.write(ansi.cursor.up(1) + ansi.erase.inLine(2))
-console.log('Complete')
+console.log(79)
+await sleep(3000)
+console.log(79)

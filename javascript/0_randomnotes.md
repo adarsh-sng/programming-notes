@@ -84,3 +84,5 @@ setTimeout(() => {
 - Global `setTimeout(cb, ms)` expects a callback, can't be used with `await`.
 - `import { setTimeout } from 'node:timers/promises'` provides a Promise-returning version for use with `await` (no callback).
 - Use Promise-based `setTimeout` for cleaner linear async code, especially in CLI apps.
+
+> {} -> this means you have to return something from the function, () -> this means you don't have to return anything from the function.

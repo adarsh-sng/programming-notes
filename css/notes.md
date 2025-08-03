@@ -21,3 +21,8 @@
 - **Pros**: Reusability, organization.
 - **Cons**: Performance hit from extra requests; prefer build tools for production.
 - **Best Practice**: Use sparingly; opt for multiple `<link>` tags in HTML for better loading.
+- **Note**: `@import` is deprecated in favor of `<link>` tags in HTML for better performance.
+---
+## user agent styles
+- default styles applied by browsers to HTML elements, can be overridden by your own styles.
+
