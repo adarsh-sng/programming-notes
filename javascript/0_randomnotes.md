@@ -86,3 +86,18 @@ setTimeout(() => {
 - Use Promise-based `setTimeout` for cleaner linear async code, especially in CLI apps.
 
 > {} -> this means you have to return something from the function, () -> this means you don't have to return anything from the function.
+
+---
+## hoisting
+- Hoisting is a JavaScript mechanism where **variables and function** declarations are moved to the top of their containing scope during the compile phase.
+- This means that you can use variables and functions before they are declared in the code.
+- However, only the declarations are hoisted, not the initializations.
+- For example, if you try to access a variable before it is declared, it will return `undefined`, not an error.
+- Hoisting applies to both function declarations and variable declarations (using `var`).
+- It does not apply to variables declared with `let` and `const`, which are block-scoped and not hoisted in the same way.
+- Example:
+```javascript
+console.log(x); // undefined
+var x = 5;
+console.log(x); // 5
+``` 
