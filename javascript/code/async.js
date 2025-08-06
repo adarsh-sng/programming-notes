@@ -31,8 +31,8 @@ const asyncf1 = async()=>{
 }
 const asyncf2 = async()=>{
     console.log("this is async func 2 first print")
-     await new Promise(resolve=>{
-        setTimeout(()=>{
+      new Promise(resolve=>{
+        await setTimeout(()=>{
             console.log("this is print 1 inside promsie and using await inside async fun 2")
             resolve()
         })
@@ -68,3 +68,7 @@ console.log("end")
 // } catch (err) {
 //   console.error("Error from asyncf2 call:", err);
 // }
+
+
+// An async function's promise resolves as soon as the function returns. If you don't explicitly await something or
+// return a pending promise from within the async function, it will return a resolved promise immediately.
