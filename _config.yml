@@ -1,6 +1,7 @@
 title: Bootdev Notes
 description: My personal notes on various topics.
-theme: jekyll-theme-minimal
+remote_theme: just-the-docs/just-the-docs
+color_scheme: dark
 plugins:
   - jekyll-relative-links
 relative_links:
