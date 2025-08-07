@@ -1,0 +1,10 @@
+title: Bootdev Notes
+description: My personal notes on various topics.
+theme: jekyll-theme-minimal
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: true
+include:
+  - README.md
