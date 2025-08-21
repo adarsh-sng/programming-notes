@@ -11,3 +11,4 @@
         };
     },[counter])// dependencies array, if empty it runs only once after mount, otherwise runs when dependencies change
 ```
+by default it runs after every render.

@@ -26,3 +26,17 @@
 ## user agent styles
 - default styles applied by browsers to HTML elements, can be overridden by your own styles.
 
+:root is a pseudoclass that matches the document's root element, typically `<html>`.
+
+## CSS Variables.
+:root{
+    --color-dark:;
+}
+
+## Pseudoselectors.
+
+
+## Gradeient
+
+tolearn - linear gradient,grid,clamp,boxshadow
+what is auto?

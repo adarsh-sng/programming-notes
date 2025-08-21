@@ -31,8 +31,8 @@ const asyncf1 = async()=>{
 }
 const asyncf2 = async()=>{
     console.log("this is async func 2 first print")
-      new Promise(resolve=>{
-        await setTimeout(()=>{
+      await new Promise(resolve=>{
+        setTimeout(()=>{
             console.log("this is print 1 inside promsie and using await inside async fun 2")
             resolve()
         })

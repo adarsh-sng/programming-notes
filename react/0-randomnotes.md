@@ -37,7 +37,7 @@ disabled property in react.
 
 key in loop in react is used to identify which items have changed, are added, or are removed. It helps React optimize the rendering process by keeping track of elements in a list.
 ![alt text](./assets/image.png)
-
+### React treats key specially and does not pass it as a regular prop to the child component.
 in a tag the whole page is reloaded, in link tag only the part of the page is reloaded.
 there is also a `navlink` tag which is used to navigate between pages in a react application.
 
