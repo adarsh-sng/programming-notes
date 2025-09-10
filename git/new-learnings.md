@@ -7,4 +7,4 @@
 
 `git reset --hard`
 
-`git config --global core.editor "code --wait"`
+`git config --global core.editor "code --wait"` - sets Visual Studio Code as the default editor for Git commands.

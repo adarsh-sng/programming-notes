@@ -49,3 +49,7 @@ in react router to optimize the api call we can use `loader` and `action` functi
 > ### hooks are top level, stateful functions that allow you to use React features without writing a class. They can only be called at the top level of a component or a custom hook, and not inside loops, conditions, or nested functions.
 
 > first letter of comoponent should be capitalized, otherwise it will be treated as a regular HTML element.?(ai)
+
+
+suppose i have a get joke and post joke network call when i post it it should update the UI with the new joke without needing to refresh the page.---> i gues i will use context, react query or any other soln
+basically managing the network state and ensuring the UI is in sync with the server state.

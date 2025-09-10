@@ -29,18 +29,25 @@ console.log("start");
 const asyncf1 = async()=>{
     console.log("this is async func 1 first print")
 }
-const asyncf2 = async()=>{
-    console.log("this is async func 2 first print")
-      await new Promise(resolve=>{
-        setTimeout(()=>{
-            console.log("this is print 1 inside promsie and using await inside async fun 2")
-            resolve()
-        })
-    })
-    console.log("this is dependent on above promise of func2")
-}
+const asyncf2 = async () => {
+  console.log("this is async func 2 first print")
+  await new Promise((resolve) => {
+    setTimeout(() => {
+      console.log("this is print 1 inside promise and using await inside async fun 2");
+      resolve();
+    }, 0);
+  });
+  const a = await  new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(5); // Resolve Promise with the value 5
+    }, 2000);
+  });
+  console.log(a); // Logs: 5
+  console.log("this is dependent on above promise of func2");
+};
+
 asyncf1();
-await  asyncf2();
+await asyncf2();
 console.log("end")
 
 // async fn always return a promise

@@ -40,3 +40,9 @@
 
 tolearn - linear gradient,grid,clamp,boxshadow
 what is auto?
+
+- em compounds
+- for font size em sees the parent, but for margin and padding it sees the element itself(font size).
+- for font use rem, for margin and padding use em.
+
+
