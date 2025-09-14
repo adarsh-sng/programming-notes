@@ -101,3 +101,9 @@ console.log(x); // undefined
 var x = 5;
 console.log(x); // 5
 ``` 
+
+---
+## Rest and Spread Operator
+- The rest operator (`...`) is used to collect multiple elements into an array. It is commonly used in function parameters to accept a variable number of arguments.
+- The spread operator (`...`) is used to expand an array or object into individual elements. It is commonly used in function calls and array literals.
+---
