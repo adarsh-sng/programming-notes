@@ -46,3 +46,23 @@ what is auto?
 - for font use rem, for margin and padding use em.
 
 
+## Fonts
+@font-face{
+    font-family: MyFont;
+    src: url('myfont.woff2') format('woff2'),
+         url('myfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; /* Optional: controls how the font is displayed while loading */
+}
+body{
+    font-family: MyFont, sans-serif;
+}
+---
+## other way
+@import url('https://fonts.googleapis.com/css2?family=MyFont:wght@400&display=swap'); in css
+
+## in tailwind
+@theme{
+    --font-myfont: MyFont, sans-serif;
+}
