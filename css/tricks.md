@@ -35,5 +35,5 @@ prose in tailwind
 <div class="p-4 grid gap-4 sm:grid-cols-12 container mx-auto">
   <div class="min-h-[100px] rounded bg-orange-500 shadow-xl sm:col-span-2"></div>
   <div class="min-h-[100px] rounded bg-red-500 shadow-xl sm:col-span-10"></div>
-</div>
+</div>w
 ```

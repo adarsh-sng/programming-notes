@@ -47,3 +47,14 @@
 
 `git diff`
 - Shows unstaged changes between your working directory and staging 
+
+
+---
+## origin vs upstream
+In Git, "origin" and "upstream" are commonly used terms to refer to remote repositories, but they serve different purposes:
+- **origin**: This is the default name given to the remote repository from which you cloned your local repository. It typically refers to your own fork of a project. When you run commands like `git fetch origin` or `git push origin main`, you're interacting with your fork.
+- **upstream**: This term is used to refer to the original repository from which your fork was created. It is the source repository that you want to keep your fork in sync with. When you run commands like `git fetch upstream` or `git merge upstream/main`, you're pulling in changes from the original project into your fork.- To set up "upstream" for your fork, you would typically run:
+- To set up "upstream" for your fork, you would typically run:
+  ```bash
+  git remote add upstream <URL-of-original-repository>
+  ```

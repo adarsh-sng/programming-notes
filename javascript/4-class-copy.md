@@ -55,3 +55,19 @@ function Person(name) {
 }
 const p = new Person("Ada"); // 'this' inside Person refers to the new object
 ```
+---
+JavaScript primitives are built-in value types defined by the language spec (ECMAScript) that are not objects and are immutable; the engine represents them directly and uses temporary “wrapper objects” only when accessing methods.
+
+What counts as primitive
+The 7 primitives are: string, number, bigint, boolean, symbol, undefined, and null.
+
+typeof results: "string", "number", "bigint", "boolean", "symbol", "undefined"; special case: typeof null is "object".
+
+How they “have methods”
+Primitives don’t actually have properties or methods; when doing "abc".toUpperCase() or (3.14).toFixed(2), the engine auto-boxes the primitive into a temporary wrapper (String, Number, Boolean, Symbol, BigInt) to resolve the property, then discards it.
+
+Because the wrapper is ephemeral, attempts to set properties on a primitive don’t persist:
+
+let s = "hi"; s.x = 1; s.x // undefined
+
+---

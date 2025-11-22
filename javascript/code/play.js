@@ -19,3 +19,5 @@ const myObject = {
 };
 // myObject["obnoxious property"]()
 console.table(myObject)
+
+const a =()=>y()

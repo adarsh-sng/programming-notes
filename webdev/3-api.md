@@ -28,7 +28,7 @@ const myRequest = new Request("https://example.org/post", {
   headers: myHeaders,
 });
 
-const response = await fetch(myRequest);
+const response = await fetch(myRequest); 
 ```
 
 fetch takes a request object as input and returns a promise that resolves to a response object.
