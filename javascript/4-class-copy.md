@@ -71,3 +71,15 @@ Because the wrapper is ephemeral, attempts to set properties on a primitive donâ
 let s = "hi"; s.x = 1; s.x // undefined
 
 ---
+```js
+class Student {
+  constructor() {
+    this.fname="Adarsh";
+  }
+  study() {
+    return `${this.fname} is studying.`;
+  }
+}
+const s1 = new Student;
+const s2 = {__proto__: Student.prototype};
+``` 
