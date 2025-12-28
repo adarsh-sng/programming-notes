@@ -69,5 +69,31 @@ map.set("IN","INDIA")
 //     console.log(`${key}==>${value}`)
 // }
 
-// object can't be iterated in  for of loop 
 ```
+// object can't be iterated in  for of loop 
+The for...of loop specifically looks for a special method called [Symbol.iterator] on the item you give it. Arrays have it. Strings have it. Plain objects do not have it.
+1. The Error
+If you try for (let x of obj), JS basically checks:
+"Does obj have a Symbol.iterator function?" -> No. -> Throw TypeError: obj is not iterable.​
+2. Why don't they have it? (The "Why")
+It's by design. Objects are unordered collections of keys. "Iterating" implies a specific sequence (first, second, third). Since objects traditionally didn't guarantee order (until recently with ES6 keys), there is no single "correct" way to iterate them:
+Should it iterate keys?
+Should it iterate values?
+Should it include hidden prototype properties?
+Because there's no single right answer, JS leaves it undefined rather than guessing wrong.​
+
+
+---
+| Method    | Mutates? | Return type    | Typical use                  | Needs callback?        |
+| --------- | -------- | -------------- | ---------------------------- | ---------------------- |
+| forEach   | No       | undefined      | Side effects / logging       | Yes mdn2.netlify​      |
+| map       | No       | New array      | Transform elements           | Yes developer.mozilla​ |
+| filter    | No       | New array      | Keep some elements           | Yes openjavascript​    |
+| reduce    | No       | Single value   | Sum, aggregate, build object | Yes geeksforgeeks​     |
+| find      | No       | Single element | First match                  | Yes w3schools​         |
+| findIndex | No       | Number (index) | Index of first match         | Yes w3schools​         |
+| some      | No       | Boolean        | “Any element matches?”       | Yes w3schools​         |
+| every     | No       | Boolean        | “All elements match?”        | Yes w3schools​         |
+| sort      | Yes      | Same array     | Reorder elements             | Yes/No openjavascript​ |
+| flat      | No       | New array      | Flatten nesting              | No w3schools​          |
+| flatMap   | No       | New array      | Map then flatten             | Yes w3schools​         |

@@ -1,4 +1,4 @@
-## 4-sep-2024
+## 4-sep-2025
 ORM - basically oops for databases
 compose middleware?
 
@@ -10,3 +10,7 @@ middleware -> function(req, res, next) {
   // middleware logic
   next();
 }
+
+----
+## 22 dec 2025
+npm link 

@@ -5,6 +5,7 @@ class foo{
   public:
   int val;
   std::string st;
+  foo(int v, std::string s) : val(v), st(s) {}
 };
 int main(){
   // foo s1(23,"hello");

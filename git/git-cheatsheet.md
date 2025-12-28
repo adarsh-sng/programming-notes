@@ -126,53 +126,63 @@ git config --global alias.lg 'log --oneline --graph --all'
 ## Power User Hacks & Tips
 
 ### 1. Quick Commit All Changes
+
 ```bash
 git commit -am "message"     # Add + commit in one go
 ```
 
 ### 2. Undo Last Commit but Keep Changes
+
 ```bash
 git reset --soft HEAD~1      # Perfect for fixing commit messages
 ```
 
 ### 3. Interactive Add (Choose What to Stage)
+
 ```bash
 git add -p                   # Patch mode - choose hunks to stage
 ```
 
 ### 4. Find When Bug Was Introduced
+
 ```bash
 git bisect start HEAD v1.0   # Binary search between HEAD and v1.0
 ```
 
 ### 5. Temporarily Switch Branch Without Committing
+
 ```bash
 git stash && git checkout <branch> && git stash pop
 ```
 
 ### 6. Create Empty Commit (Useful for CI Triggers)
+
 ```bash
 git commit --allow-empty -m "trigger CI"
 ```
 
 ### 7. Show Files Changed in Commit
+
 ```bash
 git diff-tree --no-commit-id --name-only -r <commit>
 ```
 
 ### 8. Search Commit Messages
+
 ```bash
 git log --grep="keyword"     # Find commits with keyword in message
 git log -S "function_name"   # Find commits that added/removed code
 ```
 
 ### 9. Ignore File Changes Temporarily
+
 ```bash
 git update-index --skip-worktree <file>    # Ignore local changes
 git update-index --no-skip-worktree <file> # Stop ignoring
 ```
 
 ### 10. Sync Fork with Upstream
+
 ```bash
 git remote add upstream <original-repo-url>
 git fetch upstream
@@ -181,27 +191,32 @@ git merge upstream/main
 ```
 
 ### 11. Squash Multiple Commits into One
+
 ```bash
 git reset --soft HEAD~3      # Reset 3 commits but keep changes
 git commit -m "Clean commit message"
 ```
 
 ### 12. Find Large Files in History
+
 ```bash
 git rev-list --objects --all | git cat-file --batch-check='%(objecttype) %(objectname) %(objectsize) %(rest)' | awk '/^blob/ {print substr($0,6)}' | sort --numeric-sort --key=2 | tail -10
 ```
 
 ### 13. Backup Current Branch
+
 ```bash
 git branch backup-$(date +%Y%m%d-%H%M%S)
 ```
 
 ### 14. Show Git Aliases
+
 ```bash
 git config --get-regexp alias
 ```
 
 ### 15. Checkout Previous Branch
+
 ```bash
 git checkout -               # Like cd -
 ```
@@ -209,24 +224,28 @@ git checkout -               # Like cd -
 ## Emergency Commands
 
 ### Recover Deleted Branch
+
 ```bash
 git reflog                   # Find the commit hash
 git checkout -b <branch-name> <commit-hash>
 ```
 
 ### Recover Deleted Commits
+
 ```bash
 git reflog                   # Find lost commit
 git cherry-pick <commit-hash>
 ```
 
 ### Reset to Remote State
+
 ```bash
 git fetch origin
 git reset --hard origin/main
 ```
 
 ### Remove Sensitive Data from History
+
 ```bash
 git filter-branch --force --index-filter \
 'git rm --cached --ignore-unmatch <file>' \
