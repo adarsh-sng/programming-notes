@@ -53,3 +53,6 @@ in react router to optimize the api call we can use `loader` and `action` functi
 
 suppose i have a get joke and post joke network call when i post it it should update the UI with the new joke without needing to refresh the page.---> i gues i will use context, react query or any other soln
 basically managing the network state and ensuring the UI is in sync with the server state.
+
+
+*** Everything is immutable in react ***
