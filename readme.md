@@ -1,4 +1,4 @@
-# 📝 Bootdev Notes
+# 📝  Notes ig
 
 A personal collection of programming notes taken while learning from Boot.dev, books, and other resources.
 
