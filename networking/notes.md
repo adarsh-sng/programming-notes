@@ -29,3 +29,14 @@ When you read from a network connection, the data is pushed to you by the remote
 
 
 ## `cURL` is a command line tool for making HTTP requests.
+
+
+### SSH
+
+SSH is a client-server protocol.
+
+The Server: The remote machine (e.g., an AWS EC2 instance or a Raspberry Pi) runs an SSH daemon (sshd) that listens on Port 22.
+
+The Client: Your machine runs an SSH client (like ssh in terminal or PuTTY).
+
+When they connect, they perform a "handshake" to create an encrypted channel. Once established, everything sent over that connection (commands, passwords, files) is scrambled so hackers cannot read it.
