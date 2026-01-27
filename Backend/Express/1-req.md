@@ -18,15 +18,15 @@
 
 These are headers almost EVERY request sends.
 
-| Header            | Description                                         |
-| ----------------- | --------------------------------------------------- |
-| `Host`            | Domain being requested (required by HTTP/1.1)       |
-| `User-Agent`      | Identifies browser/app (Chrome, Safari, curl, etc.) |
-| `Accept`          | What response format client accepts                 |
-| `Connection`      | `keep-alive` or `close`                             |
-| `Accept-Encoding` | `gzip`, `br`, `deflate` (compression)               |
-| `Content-Length`  | Size of body (for POST/PUT)                         |
-| `Content-Type`    | Indicates JSON, form-data, etc. (for POST/PUT)      |
+| Header            | Description                                         | Example                                      |
+| ----------------- | --------------------------------------------------- | -------------------------------------------- |
+| `Host`            | Domain being requested (required by HTTP/1.1)       | `Host: api.example.com`                      |
+| `User-Agent`      | Identifies browser/app (Chrome, Safari, curl, etc.) | `User-Agent: Mozilla/5.0 (Windows NT 10.0)`  |
+| `Accept`          | What response format client accepts                 | `Accept: application/json`                   |
+| `Connection`      | `keep-alive` or `close`                             | `Connection: keep-alive`                     |
+| `Accept-Encoding` | `gzip`, `br`, `deflate` (compression)               | `Accept-Encoding: gzip, deflate, br`         |
+| `Content-Length`  | Size of body (for POST/PUT)                         | `Content-Length: 256`                        |
+| `Content-Type`    | Indicates JSON, form-data, etc. (for POST/PUT)      | `Content-Type: application/json`             |
 
 ## Browser-only compulsory headers
 

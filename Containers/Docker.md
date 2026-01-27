@@ -1,4 +1,6 @@
 # 🐳 Docker Guide for Node.js & Postgres
+## node modules generally should be in a volume as they have OS specific binaries so cant copy from host to container directly
+- volume mapping -> can lead to hot reload??
 
 This guide covers two workflows:
 

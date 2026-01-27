@@ -9,3 +9,4 @@
 
 psql shell. is a powerful interactive terminal for working with PostgreSQL databases. You can execute SQL commands directly, manage database objects, and perform administrative tasks.
 
+schema-> in postgres its like a folder inside a database to organize tables, by default there is public schema
