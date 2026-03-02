@@ -12,3 +12,5 @@ let strLength: number = (someValue as string).length;
 // satisfies
 let user = { name: "adarsh", age: 22 } as const satisfies { name: string; age: number };
 ``` 
+//| union type
+// & intersection

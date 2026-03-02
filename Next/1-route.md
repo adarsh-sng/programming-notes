@@ -172,3 +172,7 @@ export default function LoginButton() {
 | Route group    | `(group)/page.js`          | `/` (folder ignored)     |
 | Private folder | `_utils/`                  | (never routed)           |
 | API route      | `folder/route.js`          | `/folder` (returns JSON) |
+
+---
+Parallel routes: @folder(slots)
+-> Each defined slot automatically becomes a prop in its corresponding `layout.tsx` file.

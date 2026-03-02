@@ -8,3 +8,4 @@ console.log(sumNum(num))
 // let newUser={name:"adarsh",isPaid:true,email:"ada@ts"}
 // createUser(newUser); // ---> this will not give error
 // createUser({name:"adarsh",isPaid:true,email:"ada@ts"}) // -----> this will give error
+

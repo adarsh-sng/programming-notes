@@ -97,3 +97,19 @@ Because there's no single right answer, JS leaves it undefined rather than guess
 | sort      | Yes      | Same array     | Reorder elements             | Yes/No openjavascript​ |
 | flat      | No       | New array      | Flatten nesting              | No w3schools​          |
 | flatMap   | No       | New array      | Map then flatten             | Yes w3schools​         |
+
+---
+## Object Static Methods
+```js
+const myObj={
+    name:"adarsh",
+    age:22,
+    city:"delhi"
+}   
+// const keys =Object.keys(myObj);
+// const values =Object.values(myObj);
+const entries =Object.entries(myObj);
+// console.log(keys);
+// console.log(values);
+console.log(entries);   
+```
