@@ -14,7 +14,7 @@ step 3 consume
 ```js
 import { createContext, useState } from "react";
 
-export const CounterContext = createContext(null);
+export const CounterContext = createContext(null); // the null is what will be the value when we access it without a provider, it is optional but it is good to have it for better type checking and to avoid errors when we access the context without a provider.
 
 export const CounterProvider=(props)=>{
   const [count,setCount]=useState(0)

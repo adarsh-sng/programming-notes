@@ -43,8 +43,6 @@ there is also a `navlink` tag which is used to navigate between pages in a react
 
 isActive is a prop in `NavLink` that is used to apply a specific style to the active link. It is used to indicate which link is currently active or selected.
 
-in react router to optimize the api call we can use `loader` and `action` functions. The `loader` function is used to fetch data before the component is rendered(when user mouse comes to the button), while the `action` function is used to handle form submissions or other actions that require server interaction.
-
 
 > ### hooks are top level, stateful functions that allow you to use React features without writing a class. They can only be called at the top level of a component or a custom hook, and not inside loops, conditions, or nested functions.
 
@@ -56,3 +54,7 @@ basically managing the network state and ensuring the UI is in sync with the ser
 
 
 *** Everything is immutable in react ***
+
+### {children} do not re-render even if parent re-renders, unless they have shared state.
+
+
