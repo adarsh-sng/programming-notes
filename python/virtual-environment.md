@@ -23,3 +23,29 @@
 - `uv remove` removes a package from the virtual environment.
 - `uv list` lists all packages in the virtual environment.
 - `uv tree` shows the dependency tree of the virtual environment.
+
+
+I’m in read‑only plan mode, so here’s the plan to add the CLI command. Tell me to proceed when you want it implemented.
+Plan
+1. Update pyproject.toml to add:
+   - [project.scripts]
+   - rsearch = "main:main"
+2. (Optional) Remove any other script names if present (none currently).
+3. Install locally so the command becomes available:
+   - pip install -e . (or uv sync if you’re using uv)
+4. Verify:
+   - rsearch keyword build
+   - rsearch semantic search_chunked "space adventure"
+
+uv sync
+warning: Skipping installation of entry points (`project.scripts`) because this project is not packaged; to install entry points, set `tool.uv.package = true` or define a `build-system`
+Resolved 61 packages in 12ms
+
+
+Keyword search
+- rsearch keyword build
+- rsearch keyword search "space adventure"
+- rsearch keyword bm25search "space adventure"
+Semantic search (needs model deps)
+- rsearch semantic embed_chunks
+- rsearch semantic search_chunked "space adventure"

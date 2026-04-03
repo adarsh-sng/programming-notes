@@ -7,3 +7,7 @@ buses are digital connection between functional blocks. they can be serial or pa
 
 harvard architecture -> separate memory and buses for instructions and data
 von neumann architecture -> single memory and bus for both instructions and data
+
+
+- malloc returns a void pointer to a block of memory of at least the requested size(we usually type cast it to our needed memory). The memory is not initialized, so it contains garbage values. If the allocation fails, it returns NULL.
+
